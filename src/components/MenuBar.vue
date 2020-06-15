@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-			<img src="logo-no-background.png" width="20" height="25" alt="">
+			<img src="../assets/logo-no-background.png" width="20" height="25" alt="logo">
 		</a>
     <button
       class="navbar-toggler"
