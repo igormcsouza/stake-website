@@ -2,25 +2,21 @@
   <div id=app>
     <stake-menu-bar />
     <router-view></router-view>
+    <stake-footer />
   </div>
 </template>
   
 <script>
-import StakeMenuBar from './components/MenuBar.vue'
+import StakeMenuBar from './components/MenuBar'
+import StakeFooter from './components/footer/Footer'
 
 export default {
   name: 'App',
   components: {
     StakeMenuBar,
+    StakeFooter
   }
 }
 </script>
 
-<style>
-.white-square {
-	margin: 30px 50px;
-	padding: 25px 25px;
-	border-radius: 16px;
-	background-color: #ffffff;
-}
-</style>
+<style></style>
