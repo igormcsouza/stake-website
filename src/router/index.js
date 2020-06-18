@@ -1,27 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
+import StakeHome from './../views/home/Home'
+import StakeAgenda from './../views/agenda/Agenda'
+import StakeMessages from './../views/messages/Messages.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'StakeHome',
+    component: StakeHome
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/agenda',
+    name: 'StakeAgenda',
+    component: StakeAgenda
+  },
+  {
+    path: '/messages',
+    name: 'StakeMessages',
+    component: StakeMessages
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
+  linkExactActiveClass: 'active',
   base: process.env.BASE_URL,
   routes
 })
