@@ -29,4 +29,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.white-square {
+	margin: 30px 50px;
+	padding: 25px 10px;
+	border-radius: 16px;
+	background-color: #ffffff;
+}
+</style>

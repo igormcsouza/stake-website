@@ -1,9 +1,14 @@
 <template>
-  <h1>AGENDA</h1>
+  <stake-entry />
 </template>
 
 <script>
+import StakeEntry from "./entry/Entry.vue"
+
 export default {
-  name: "StakeAgenda"
+  name: "StakeAgenda",
+  components: {
+    StakeEntry
+  }
 }
 </script>
