@@ -1,11 +1,11 @@
 <template>
 	<div class="row row-striped">
 		<div class="col-2 text-right" style="display: flex; align-items: center; flex-direction: column">
-			<h1 class="display-4"><span class="badge badge-secondary">{{ info.day }}</span></h1>
-			<h2>{{ info.month }}</h2>
+			<h2 class="display-4"><span class="badge badge-secondary">{{ info.day }}</span></h2>
+			<h3>{{ info.month }}</h3>
 		</div>
 		<div class="col-10">
-			<h3 class="text-uppercase"><strong>{{ info.title }}</strong></h3>
+			<h4 class="text-uppercase"><strong>{{ info.title }}</strong></h4>
 			<ul class="list-inline">
 				<li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> {{ info.weekday }}</li>
 				<li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ info.time }}</li>
@@ -29,6 +29,7 @@ export default {
 
 <style scoped>
 .row-striped:nth-of-type(odd){
+	border-radius: 6px;
   background-color: #efefef;
   border-left: 4px #000000 solid;
 }

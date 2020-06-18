@@ -1,5 +1,6 @@
 <template>
 	<div class="white-square">
+		<h1 style="margin: 25px 15px;">Próximos Eventos</h1> 
 		<div class="container">
 			<template v-for="(event, key) in events">
 				<stake-event :info="event" :key="key"/>
@@ -9,7 +10,7 @@
 </template>
 
 <script>
-import StakeEvent from "./event.vue"
+import StakeEvent from "./Event"
 
 export default {
 	name: "StakeEntry",
@@ -52,4 +53,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.padding {
+  padding: 15px 15px;
+}
+</style>

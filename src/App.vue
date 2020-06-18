@@ -32,7 +32,7 @@ export default {
 <style>
 .white-square {
 	margin: 30px 50px;
-	padding: 25px 10px;
+	padding: 25px 25px;
 	border-radius: 16px;
 	background-color: #ffffff;
 }
