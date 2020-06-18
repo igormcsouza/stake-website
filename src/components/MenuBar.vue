@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 50px">
+    <a class="navbar-brand" href="/">
 			<img src="../assets/logo-no-background.png" width="20" height="25" alt="logo">
 		</a>
     <button
@@ -16,14 +16,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#home" @click="selectTab('StakeHome')">Home</a>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#agenda" @click="selectTab('StakeAgenda')">Agenda</a>
+          <router-link class="nav-link" to="/agenda">Agenda</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#messages" @click="selectTab('StakeMessages')">Mensagens</a>
+          <router-link class="nav-link" to="/messages">Mensagens</router-link>
         </li>
       </ul>
     </div>
@@ -33,11 +33,6 @@
 <script>
 export default {
   name: "StakeMenuBar",
-  methods: {
-    selectTab(event){
-      this.$emit('selectTab', event)
-    }
-  }
 };
 </script>
 

@@ -1,11 +1,7 @@
 <template>
 	<div>
-		<div class="white-square">
-			<stake-agenda />
-		</div>
-		<div class="white-square">
-			<stake-news />
-		</div>
+		<stake-news />
+		<stake-agenda />
 	</div>
 </template>
   
