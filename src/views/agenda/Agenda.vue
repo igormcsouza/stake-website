@@ -1,9 +1,6 @@
 <template>
-  <div class="container">
-    <h1 class="my-4" style="color: #FB8B50;">
-      Calendário da Estaca
-      <small>Programação</small>
-    </h1>
+  <div class="container adding-margins">
+    <h1 class="my-4" style="color: #FB8B50;"> Calendário da Estaca </h1>
     <div class="container">
       <template v-for="(event, key) in events">
         <stake-event :info="event" :key="key" />
@@ -57,4 +54,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.adding-margins {
+	padding: 0px 50px;
+}
+
+@media screen and (max-width: 800px) {
+	.adding-margins {
+		padding: 0px 10px;
+	}
+}
+</style>

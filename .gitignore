@@ -20,3 +20,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Take out the push to heroku
+push_to_heroku.sh

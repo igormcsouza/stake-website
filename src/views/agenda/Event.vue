@@ -1,10 +1,10 @@
 <template>
-	<div class="row row-striped">
-		<div class="col-2 text-right" style="display: flex; align-items: center; flex-direction: column">
+	<div class="row row-striped spacement">
+		<div class="text-right" style="display: flex; align-items: center; flex-direction: column; padding: 10px;">
 			<h3 class="display-4"><span class="badge badge-secondary" style="background-color: #6D8AFC;">{{ info.day }}</span></h3>
 			<h4>{{ info.month }}</h4>
 		</div>
-		<div class="col-10">
+		<div style="padding: 10px;">
 			<h5 class="text-uppercase"><strong>{{ info.title }}</strong></h5>
 			<ul class="list-inline">
 				<li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> {{ info.weekday }}</li>
@@ -41,5 +41,21 @@ export default {
 
 .row-striped {
     padding: 15px 0px;
+}
+
+.spacement {
+	display: flex; 
+	align-items: center;
+	flex-direction: row;
+	flex-basis: auto;
+}
+
+@media screen and (max-width: 800px) {
+	.spacement {
+		display: flex; 
+		align-items: center;
+		flex-direction: column;
+		flex-basis: auto;
+	}
 }
 </style>
