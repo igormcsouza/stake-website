@@ -5,4 +5,4 @@ before_install:
     - docker build -t igormcsouza/estacamontese:1.0.0 .
 
 script:
-    - docker run igormcsouza/estacamontese:1.0.0 sh test.sh
+    - docker run igormcsouza/estacamontese:1.0.0 sh deploy/test.sh
