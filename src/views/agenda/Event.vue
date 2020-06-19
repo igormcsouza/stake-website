@@ -51,11 +51,11 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
-.spacement {
-	display: flex; 
-	align-items: center;
-	flex-direction: column;
-	flex-basis: auto;
-}
+	.spacement {
+		display: flex; 
+		align-items: center;
+		flex-direction: column;
+		flex-basis: auto;
+	}
 }
 </style>
