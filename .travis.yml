@@ -10,7 +10,7 @@ script:
 deploy:
     provider: heroku
     api_key:
-        secure: "$OTHER_KEY"
+        secure: "5c148265-e880-49ca-8393-57a28346d15b"
     app: estacamontese
     run:
         - "docker build -f deploy/Dockerfile -t igormcsouza/estacamontese:production . "
