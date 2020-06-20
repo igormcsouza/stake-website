@@ -11,6 +11,7 @@ deploy:
     provider: heroku
     api_key:
         secure: "$HEROKU_KEY"
+    app: estacamontese
     run:
         - "docker build -f deploy/Dockerfile -t igormcsouza/estacamontese:production . "
         - "heroku container:login"
