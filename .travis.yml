@@ -1,7 +1,7 @@
 services:
 - docker
 before_install:
-- docker build -t igormcsouza/estacamontese:test . -f deploy/Dockerfile.dev
+- docker build -t igormcsouza/estacamontese:test . -f develop/Dockerfile
 script:
 - docker run igormcsouza/estacamontese:test npm run test:unit
 deploy:
