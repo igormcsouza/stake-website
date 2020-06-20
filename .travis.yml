@@ -17,3 +17,4 @@ deploy:
         - "docker tag igormcsouza/estacamontese:production registry.heroku.com/estacamontese/web"
         - "docker push registry.heroku.com/estacamontese/web"
         - "heroku container:release web -a estacamontese"
+    on: production
