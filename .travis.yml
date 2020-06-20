@@ -1,19 +1,12 @@
 services:
-    - docker
-
+- docker
 before_install:
-    - docker build -t igormcsouza/estacamontese:test . -f deploy/Dockerfile.dev
-
+- docker build -t igormcsouza/estacamontese:test . -f develop/Dockerfile
 script:
-    - docker run igormcsouza/estacamontese:test npm run test:unit
-
+- docker run igormcsouza/estacamontese:test npm run test:unit
 deploy:
-    provider: heroku
-    api_key:
-        secure: "$HEROKU_KEY"
-    run:
-        - "docker build -f deploy/Dockerfile -t igormcsouza/estacamontese:production . "
-        - "heroku container:login"
-        - "docker tag igormcsouza/estacamontese:production registry.heroku.com/estacamontese/web"
-        - "docker push registry.heroku.com/estacamontese/web"
-        - "heroku container:release web -a estacamontese"
+  provider: heroku
+  api_key:
+    secure: L7obhNeSVl2hnDujr015wi/ZfIZjt8CRgjgWXCtPuxw5wsnSi8z6eEir3IdPzE9gwTgOw3rMOzFXD2YcPwJTlujjSo7c4ELl+/Dwg0n42x8COF+4+d33uWkPhFMpF3MN8e1PIzVUppGqfuGICQ7+lU8IG8AbLu/HlqOhevqg6V1IT1k8dCYNHCm/y5UOTN3FnMF1todMmBKi9mG+miWBxwJ5RaqHwLmW31vG0bmG7y0s2e0DqLDC3rw0tbhALTOVbkUnyfogZy4CX/0K5Xu80wnF4dMPkATHsRmJqTkSuSFeq7wFCl3KelN3ITnWAe+Do1iTxX2UP5ulSGqsfj44EZMT2Ac1EYjpE18OK5oyPbKL40gN3uw877TJhhsdKB1my/qKJhqr+YOTJESl4xC6HWhmG42AXwZxx4okK8vxXAAHo2+bmCnaMgS40um0rexoTKVd9zdSoO4PCKJLzR1q1m+1LZ7etX0pkhcXddWsgRUjJv0oZqpD6cXTBEfv9Sj31yIY04Ev/CRfYw37hGNpNdRTbMCi1eVjB+qTUzNUA8xQdCWmiBFvSrHLoXf7Lko8cKuvdzHzRKYDtxhOcAxtLGtBrp01sIOzpIMI4T42GIlbu3/BwVldvQMZ/QvlsZD0esFAhOlWthlDFwCdb5asM1M8soHMvkqkNPm1Eb/gKNI=
+  app: estacamontese
+  on: production
