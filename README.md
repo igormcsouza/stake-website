@@ -1,5 +1,7 @@
 # stake-website
 
+[![Build Status](https://travis-ci.org/igormcsouza/stake-website.svg?branch=develop)](https://travis-ci.org/igormcsouza/stake-website)
+
 ## Project setup
 ```
 npm install
