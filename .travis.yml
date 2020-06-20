@@ -6,3 +6,14 @@ before_install:
 
 script:
     - docker run igormcsouza/estacamontese:test npm run test:unit
+
+deploy:
+    provider: heroku
+    api_key:
+        secure: "$HEROKU_KEY"
+    run:
+        - "docker build -f deploy/Dockerfile -t igormcsouza/estacamontese:production . "
+        - "heroku container:login"
+        - "docker tag igormcsouza/estacamontese:production registry.heroku.com/estacamontese/web"
+        - "docker push registry.heroku.com/estacamontese/web"
+        - "heroku container:release web -a estacamontese"
