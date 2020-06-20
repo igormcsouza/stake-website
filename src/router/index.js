@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import StakeHome from './../views/home/Home'
 import StakeAgenda from './../views/agenda/Agenda'
 import StakeMessages from './../views/messages/Messages'
-import StakeNews from './../views/news/News'
+import StakeNewsLetter from './../views/news/NewsLetter'
 
 Vue.use(VueRouter)
 
@@ -25,9 +25,9 @@ const routes = [
     component: StakeMessages
   },
   {
-    path: '/news',
-    name: 'StakeNews',
-    component: StakeNews
+    path: '/newsletter',
+    name: 'StakeNewsLetter',
+    component: StakeNewsLetter
   }
 ]
 
