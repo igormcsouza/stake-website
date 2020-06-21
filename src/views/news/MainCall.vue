@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="card-body text-right">
-        <a href="#" class="btn btn-primary">Saber Mais</a>
+        <a :href="call.link" class="btn btn-primary">Saber Mais</a>
       </div>
     </div>
   </div>

@@ -5,6 +5,8 @@ import StakeHome from './../views/home/Home'
 import StakeAgenda from './../views/agenda/Agenda'
 import StakeMessages from './../views/messages/Messages'
 import StakeNewsLetter from './../views/news/NewsLetter'
+import StakeEldersQuorum from '../views/news/moreinfo/EldersQuorum'
+
 import Stake404 from './../views/404'
 
 Vue.use(VueRouter)
@@ -28,7 +30,14 @@ const routes = [
   {
     path: '/newsletter',
     name: 'StakeNewsLetter',
-    component: StakeNewsLetter
+    component: StakeNewsLetter,
+    children: [
+      {
+        path: 'elders-quorum',
+        name: 'StakeEldersQuorum',
+        component: StakeEldersQuorum
+      }
+    ]
   },
   {
     path: '*',

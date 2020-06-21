@@ -39,13 +39,15 @@ export default {
 				id: 1, 
 				header: 'Quórum de Élderes', 
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl eros, fermentum id posuere vestibulum, sagittis suscipit nisi. Sed nulla ante, tristique volutpat interdum eu, molestie nec augue. Sed placerat.',
-        im: quorumIm
+        im: quorumIm,
+        link: '/news/elders-quorum'
 			},
 			socsoc: {
 				id: 2, 
 				header: 'Sociedade de Socorro', 
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl eros, fermentum id posuere vestibulum, sagittis suscipit nisi. Sed nulla ante, tristique volutpat interdum eu, molestie nec augue. Sed placerat.',
-        im: socsocIm
+        im: socsocIm,
+        link: '#'
 			},
       om: {
 				id: 3, 
