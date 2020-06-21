@@ -12,10 +12,10 @@
 
     <!-- Second Row (OM, OR, HF, AU) -->
     <div class="row">
-      <stake-secondary-call />
-      <stake-secondary-call />
-      <stake-secondary-call />
-      <stake-secondary-call />
+      <stake-secondary-call :call="om"/>
+      <stake-secondary-call :call="or"/>
+      <stake-secondary-call :call="hf"/>
+      <stake-secondary-call :call="au"/>
     </div>
   </div>
 </template>
@@ -23,6 +23,9 @@
 <script>
 import StakeMainCall from './MainCall'
 import StakeSecondaryCall from './SecondaryCall'
+
+import quorumIm from './../../assets/quorum.png'
+import socsocIm from './../../assets/socsoc.png'
 
 export default {
 	name: "StakeNewsLetter",
@@ -35,27 +38,42 @@ export default {
 			quorum: {
 				id: 1, 
 				header: 'Quórum de Élderes', 
-				body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl eros, fermentum id posuere vestibulum, sagittis suscipit nisi. Sed nulla ante, tristique volutpat interdum eu, molestie nec augue. Sed placerat.'
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl eros, fermentum id posuere vestibulum, sagittis suscipit nisi. Sed nulla ante, tristique volutpat interdum eu, molestie nec augue. Sed placerat.',
+        im: quorumIm
 			},
 			socsoc: {
 				id: 2, 
 				header: 'Sociedade de Socorro', 
-				body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl eros, fermentum id posuere vestibulum, sagittis suscipit nisi. Sed nulla ante, tristique volutpat interdum eu, molestie nec augue. Sed placerat.'
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl eros, fermentum id posuere vestibulum, sagittis suscipit nisi. Sed nulla ante, tristique volutpat interdum eu, molestie nec augue. Sed placerat.',
+        im: socsocIm
+			},
+      om: {
+				id: 3, 
+				header: 'Organização das Moças', 
+				body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat rutrum rhoncus.'
+			},
+      or: {
+				id: 4, 
+				header: 'Organização dos Rapazes', 
+				body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat rutrum rhoncus.'
+			},
+      hf: {
+				id: 5, 
+				header: 'História da Família', 
+				body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat rutrum rhoncus.'
+			},
+      au: {
+				id: 6, 
+				header: 'Autossuficiência', 
+				body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat rutrum rhoncus.'
 			}
+      
 		}
 	}
 };
 </script>
 
 <style>
-.responsive-im {
-  width: 150px;
-  height: auto;
-}
-.responsive-im-secondary {
-  width: 75px;
-  height: auto;
-}
 .alignment {
   display: flex;
   align-items: center;
@@ -67,14 +85,6 @@ export default {
   }
   .add-space {
     margin-top: 15px;
-  }
-  .responsive-im {
-    width: 75px;
-    height: auto;
-  }
-  .responsive-im-secondary {
-    width: 75px;
-    height: auto;
   }
 }
 </style>

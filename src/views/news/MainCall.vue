@@ -5,7 +5,9 @@
       <div class="card-body">
         <div class="row">
           <div class="alignment">
-            <img class="responsive-im" src="../../assets/logo-no-background.png" alt="image" />
+            <div class="image-body">
+              <img class="responsive-im" :src="call.im" style="border-radius: 32px" alt="image" />
+            </div>
             <p style="margin-left: 15px;">
               {{ call.body }}
             </p>
@@ -29,3 +31,24 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.responsive-im {
+  width: 150px;
+  height: auto;
+}
+.image-body {
+  width: 200px;
+  height: 250px;
+  border: 1px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .responsive-im {
+    width: 75px;
+    height: auto;
+  }
+}
+</style>
