@@ -1,6 +1,6 @@
 <template>
 	<div class="row row-striped spacement">
-		<div class="text-right" style="display: flex; align-items: center; flex-direction: column; padding: 10px;">
+		<div class="text-right" style="display: flex; align-items: center; flex-direction: column; padding: 10px 30px;">
 			<h3 class="display-4"><span class="badge badge-secondary" style="background-color: #6D8AFC;">{{ info.day }}</span></h3>
 			<h4>{{ info.month }}</h4>
 		</div>

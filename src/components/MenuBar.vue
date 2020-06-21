@@ -25,6 +25,9 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/messages">Mensagens</router-link>
         </li>
+        <!-- <li class="nav-item">
+          <router-link class="nav-link" to="/newsletter">News</router-link>
+        </li> -->
       </ul>
     </div>
   </nav>
